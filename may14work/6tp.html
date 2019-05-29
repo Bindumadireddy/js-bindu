@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	var isSuit=function(a)
+	{
+		//var b="spades";
+		var c=["clubs","diamonds","hearts","spades"];
+		var temp=0;
+		for(var i=0;i<c.length;i++)
+		{
+			if((c[i]==a)||(c[i]==a.toUpperCase())||(c[i]==a.toLowerCase()))
+				temp=1;
+		}
+		if(temp==1)
+			return true
+		else
+			return false
+	};
+	var isRank=function(s)
+	{
+		var t=0;
+		var l=["two","three","four","five","six","seven","eight","nine","ten","jack","king","ace","queen"];
+		for(var j=0;j<l.length;j++)
+		{
+			if(l[j]==s)
+				t=7;
+		}
+		if(t==7)
+			return true
+		else
+			return false
+	};
+	var isCard=function(rank,suit)
+	{
+		var m=isRank(rank);
+		var n=isSuit(suit);
+		if(m==true&&n==true)
+			console.log("true")
+		else
+			console.log("false") 
+	};
+	isCard("bindu","spades")
+</script>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>

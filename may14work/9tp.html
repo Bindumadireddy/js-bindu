@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	var isHTMLElement = function (a)
+	 {
+	 	var a="<p>this is a paragraph</p>"
+	 	var b=a.indexOf(">")
+	 	var c=a.lastIndexOf("<")
+	 	var d=a.slice(0,b+1)
+	 	var e=a.slice(c,a.length)
+	 	if(d[0]==e[0]&&d[1]!=e[1]&&d[1]==e[2])
+	 		console.log("true")
+	 	else
+	 		console.log("false")
+
+
+};
+isHTMLElement()
+
+
+</script>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>

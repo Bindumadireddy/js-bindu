@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+var interjectAt = function (a) {
+	var e;
+	
+	var r=Math.floor(Math.random()*15)
+	var ran=Math.floor(Math.random()*2)
+	if(ran==0)
+		e="lol"
+	else
+		e="omg"
+	for(var i=0;i<=a.length;i++)
+	{
+		var s=a.slice(0,r)
+		var en=a.slice(r,a.length)
+		if(ran<a.length){
+			console.log(s+"-"+e+"-"+en)
+		}
+		else
+			console.log("string does not have that many elements")
+
+
+	}
+};
+interjectAt("this is a tweets")
+	
+</script>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>

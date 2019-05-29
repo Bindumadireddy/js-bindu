@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <h1>Welcome to JS Class</h1>
+    <a href="http://yahoo.com">Yahoo!!!</a>
+    <button>Hello</button>
+</body>
+</html>
+
+<script>
+
+    var button=document.querySelector("button");
+    button.addEventListener("click",function(){
+        alert("Hello")
+    })
+
+    var a=document.querySelector("a");
+    a.setAttribute("href","http://google.com")
+    a.textContent="Google"
+
+
+    var h1=document.querySelector("h1"); //SELECT
+    h1.style.color="red" //MANIPULATE
+
+    h1.addEventListener("mouseover",function(){
+        h1.textContent="Thank you for coming"
+    })
+
+    h1.addEventListener("mouseout",function(){
+        h1.textContent="Welcome to JS Class"
+    })
+
+    // h1.textContent="Thank you for coming"
+    // h1.innerHTML="<b>Thank You</b> for coming"
+
+    // var body = document.querySelector("body"); //SEL
+    // var isBlue = false;
+    // setInterval(function(){   //MANIPULATE
+    //     if (isBlue) {
+    //         body.style.background = "white";
+    //     } else {
+    //         body.style.background = "#3498db";
+    //     }
+    //         isBlue = !isBlue;
+    //     }
+    // , 1000);
+
+    //Hoisting
+
+    console.log(add(1,2));
+
+    //function declaration
+    function add(a,b){
+        return a+b;
+    }
+
+    //function expression
+    var sum=function(a,b){
+        return a+b;
+    }
+
+    var person={
+        name:"Varma",
+        age:46,
+        "college name":"Raghu",
+        1:"one"
+    }
+
+    var key="name";
+
+    var myNumbers=["one","two","three"];
+
+    myNumbers.forEach(function(value){
+        console.log(value)
+    })
+
+    var myMarks=[35,45,50]
+
+    var myNewMarks=myMarks.map(function(mark){
+        return mark+10;
+    })
+
+
+
+    var movies=[
+        {
+            id:1,
+            title:"Bahubali",
+            revenue:300,
+            actor:"Prabhas",
+            theaters:["A","B"]
+        },
+        {
+            id:2,
+            title:"Adhurs",
+            revenue:50,
+            actor:"NTR",
+            theaters:["B","C"]
+        },
+        {
+            id:3,
+            title:"Kushi",
+            revenue:15,
+            actor:"Pavan",
+            theaters:["C","D"]
+        }
+    ]
+
+    //every, some, filter, map, reduce
+
+    //1. is all movies crossed 100cr?
+
+    var isAll100=movies.every(function(movie){
+        return movie.revenue>=100;
+    })
+
+    console.log(isAll100);
+
+    //2. is any movie any crossed 100?
+
+    var isAny100=movies.some(function(movie){
+        return movie.revenue>=100;
+    })
+
+    console.log(isAny100)
+
+    //3. list of actors ["Prabhas","NTR","Pavan"]
+
+    var actors=movies.map(function(movie){
+        return movie.actor;
+    })
+
+    console.log(actors);
+
+    //4. total revenue of all movies
+
+    var totalRevenue=movies.reduce(function(total,movie){
+        return total+movie.revenue;
+    },0)
+
+    console.log(totalRevenue);
+
+    //5. "Bahubali,Adhurs,Kushi"
+
+    var titles=movies.reduce(function(titles,movie){
+        if(titles=="") return movie.title;
+        return titles+","+movie.title;
+    },'')
+
+    console.log(titles);
+
+    //6. theater B movies
+
+    var bMovies=movies.filter(function(movie){
+        return movie.theaters.indexOf("B")!=-1;
+    })
+
+    console.log(bMovies)
+
+    //7 
+
+    /*
+        {
+            "Bahubali":"Prabhas",
+            "Adhurs":"NTR",
+            "Kushi":"Pavan"
+        }
+
+    */
+
+    var movieActors=movies.reduce(function(movieActors,movie){
+        movieActors[movie.title]=movie.actor;
+        return movieActors;
+    },{})
+
+    console.log(movieActors);
+
+    // ["A","B","C","D"]
+
+
+    var color="red";
+
+    if(color=="red"){
+
+    }
+    else if(color=="black"){
+
+    }
+    else if(color=="black"){
+        
+    }
+    else
+    {
+
+    }
+
+    var a=2;
+
+    if(a){
+
+    }
+    else
+    {
+
+    }
+
+
+    switch(color){
+        case "red":
+            console.log("red");
+            break;
+        case "black":
+            console.log("black");
+            break;
+        default:
+            console.log("unknown");
+            break;
+    }
+
+    //while
+    //do..while
+    //for
+
+    //break
+
+    //continue
+
+
+</script>

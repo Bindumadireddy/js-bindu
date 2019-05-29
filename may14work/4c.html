@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+var getTagName = function (a) 
+{
+	var a="<div>this is a paragraph</div>";
+	var b=a.indexOf(">");
+	var c=a.lastIndexOf("<")
+	//var d=a.slice(0,b+1);
+	//var e=a.slice(c,a.length);
+	//if(d[0]==e[0] && d[1]!=e[1] && d[1]==e[2])
+	var d=b.slice(1,b);
+	var e=c.slice(c+2,-1)
+	if((a.slice(d))==(a.slice(e)))
+	{
+		console.log(a.slice(d))
+	}
+	else
+		console.log("Not an HTML Element")
+};
+getTagName()
+
+	
+</script>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+"<p>this is a paragraph</p>"

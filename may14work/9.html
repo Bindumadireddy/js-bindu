@@ -1,0 +1,53 @@
+9. Consider the following sequence of variable assignments.
+
+        var tweet = "hello world!";
+        var count = 0;
+
+        count = count + 10;
+        tweet = tweet + count;
+
+        // what is the value of tweet and count now?
+
+        count = count * 10;
+        tweet = count + tweet;
+
+        // what is the value of tweet and count now?
+
+        count = count * 100;
+        tweet = tweet + ". this is another sentence.";
+
+        // what is the value of tweet and count now?
+
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+        var tweet = "hello world!";
+        var count = 0;
+
+        count = count + 10;
+        tweet = tweet + count;
+        console.log(tweet)
+        console.log(count)
+        var tweet = "hello world!";
+        var count = 0;
+        count = count * 10;
+        tweet = count + tweet;
+        console.log(tweet)
+        console.log(count)
+        var tweet = "hello world!";
+        var count = 0;
+        count = count * 100;
+        tweet = tweet + ". this is another sentence.";
+        console.log(tweet)
+        console.log(count)
+
+	
+</script>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+ 

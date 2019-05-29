@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+var magic8Ball = function (a) {
+	var r=Math.floor(Math.random()*3)
+	
+	var exp;
+	if(r==0)
+		exp="Very doubtful"
+	else if(r==1)
+		exp="my reply is no"
+	else
+		exp="Signs point to yes"
+	if(a.charAt(a.length-1)=="?")
+	{
+		console.log(exp)
+
+	}
+	else
+		console.log("does not sounds like a question")
+
+};
+magic8Ball("Is this a question?")
+
+	
+</script>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
